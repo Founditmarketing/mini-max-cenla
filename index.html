@@ -184,6 +184,23 @@ setup_collapsible_submenus();
 .et_pb_section { opacity: 1 !important; }
 .et_animated { opacity: 1 !important; }
 </style>
+
+<style>
+/* Fix Divi column layouts */
+.et_pb_row{display:flex!important;flex-wrap:wrap!important;gap:12px!important;}
+.et_pb_row .et_pb_column_1_3{flex:0 0 calc(33.33% - 8px)!important;width:calc(33.33% - 8px)!important;float:none!important;margin:0!important;}
+.et_pb_row .et_pb_column_1_4{flex:0 0 calc(25% - 9px)!important;width:calc(25% - 9px)!important;float:none!important;margin:0!important;}
+.et_pb_row .et_pb_column_1_2{flex:0 0 calc(50% - 6px)!important;width:calc(50% - 6px)!important;float:none!important;margin:0!important;}
+.et_pb_row .et_pb_column_4_4{flex:0 0 100%!important;width:100%!important;float:none!important;margin:0!important;}
+.et_pb_row .et_pb_column_1_5{flex:0 0 calc(50% - 6px)!important;width:calc(50% - 6px)!important;float:none!important;margin:0!important;}
+/* Fix gutters1 rows */
+.et_pb_gutters1.et_pb_row{gap:8px!important;}
+.et_pb_gutters1 .et_pb_column_1_3{flex:0 0 calc(33.33% - 6px)!important;width:calc(33.33% - 6px)!important;}
+.et_pb_gutters1 .et_pb_column_1_4{flex:0 0 calc(25% - 6px)!important;width:calc(25% - 6px)!important;}
+.et_pb_gutters1 .et_pb_column_1_2{flex:0 0 calc(50% - 4px)!important;width:calc(50% - 4px)!important;}
+/* Fix the two-columns rows that actually have 3 columns */
+.two-columns.et_pb_gutters1 .et_pb_column_1_3{flex:0 0 calc(33.33% - 6px)!important;width:calc(33.33% - 6px)!important;}
+</style>
 </head>
 <body class="home wp-singular page-template-default page page-id-5 wp-theme-Divi et-tb-has-template et-tb-has-header et-tb-has-footer et_pb_button_helper_class et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
 	<div id="page-container">
@@ -446,7 +463,7 @@ setup_collapsible_submenus();
 				
 				
 			</div><div class="et_pb_row et_pb_row_6 two-columns et_pb_gutters1">
-				<div class="et_pb_column et_pb_column_1_3 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough" style="border-radius:6px;overflow:hidden;">
 				
 				
 				
@@ -464,7 +481,7 @@ setup_collapsible_submenus();
 					</div>
 				</div>
 			</div>
-			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough" style="background-color:#2d456a;border-radius:6px;">
 				
 				
 				
@@ -482,7 +499,7 @@ setup_collapsible_submenus();
 					</div>
 				</div>
 			</div>
-			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child">
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough et-last-child" style="background-color:#0880B6;border-radius:6px;overflow:hidden;">
 				
 				
 				
@@ -756,146 +773,38 @@ setup_collapsible_submenus();
 				
 				
 				
-				<div class="et_pb_module" style="padding:20px 0;">
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;padding:0 20px;">
-<img src="/wp-content/uploads/2022/02/IMG_4058-2.jpeg" alt="Storage unit interior" style="width:100%;height:250px;object-fit:cover;border-radius:6px;">
-<img src="/wp-content/uploads/2022/02/IMG_4121.jpeg" alt="Storage facility" style="width:100%;height:250px;object-fit:cover;border-radius:6px;">
-<img src="/wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2.jpg" alt="Storage units" style="width:100%;height:250px;object-fit:cover;border-radius:6px;">
-<img src="/wp-content/uploads/2022/02/IMG_4106-2.jpeg" alt="Climate controlled unit" style="width:100%;height:250px;object-fit:cover;border-radius:6px;">
-<img src="/wp-content/uploads/2022/02/IMG_4077-2.jpeg" alt="Storage exterior" style="width:100%;height:250px;object-fit:cover;border-radius:6px;">
-<img src="/wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n.jpg" alt="Storage facility exterior" style="width:100%;height:250px;object-fit:cover;border-radius:6px;">
+				<div class="et_pb_module" style="padding:20px 0;overflow:hidden;">
+<style>
+.mm-carousel{display:flex;gap:12px;animation:mmScroll 20s linear infinite;width:max-content;padding:0 20px;}
+.mm-carousel:hover{animation-play-state:paused;}
+.mm-carousel img{width:350px;height:260px;object-fit:cover;border-radius:8px;flex-shrink:0;}
+@keyframes mmScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+</style>
+<div class="mm-carousel">
+<img src="/wp-content/uploads/2022/02/IMG_4058-2.jpeg" alt="Storage unit">
+<img src="/wp-content/uploads/2022/02/IMG_4121.jpeg" alt="Storage facility">
+<img src="/wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2.jpg" alt="Storage units">
+<img src="/wp-content/uploads/2022/02/IMG_4106-2.jpeg" alt="Climate controlled unit">
+<img src="/wp-content/uploads/2022/02/IMG_4077-2.jpeg" alt="Storage exterior">
+<img src="/wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n.jpg" alt="Storage facility">
+<img src="/wp-content/uploads/2022/02/IMG_4058-2.jpeg" alt="Storage unit">
+<img src="/wp-content/uploads/2022/02/IMG_4121.jpeg" alt="Storage facility">
+<img src="/wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2.jpg" alt="Storage units">
+<img src="/wp-content/uploads/2022/02/IMG_4106-2.jpeg" alt="Climate controlled unit">
+<img src="/wp-content/uploads/2022/02/IMG_4077-2.jpeg" alt="Storage exterior">
+<img src="/wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n.jpg" alt="Storage facility">
 </div>
 </div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_1">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_1">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4121.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4121.jpeg 1536w, /wp-content/uploads/2022/02/IMG_4121-1280x1708.jpeg 1280w, /wp-content/uploads/2022/02/IMG_4121-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4121-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1536" height="2049"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_2">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_2">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2.jpg" data-srcset="/wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2.jpg 1134w, /wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2-980x1307.jpg 980w, /wp-content/uploads/2022/02/103943157_673940533182912_4124882291993264702_n-2-480x640.jpg 480w" alt="" class="dica-item-image swiper-lazy" width="1134" height="1512"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_3">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_3">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4106-2.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4106-2.jpeg 1152w, /wp-content/uploads/2022/02/IMG_4106-2-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4106-2-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1152" height="1536"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_4">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_4">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4058-3.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4058-3.jpeg 1152w, /wp-content/uploads/2022/02/IMG_4058-3-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4058-3-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1152" height="1536"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_5">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_5">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n.jpg" data-srcset="/wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n.jpg 1512w, /wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n-1280x1707.jpg 1280w, /wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n-980x1307.jpg 980w, /wp-content/uploads/2022/02/104252305_673940433182922_4086206983234434258_n-480x640.jpg 480w" alt="" class="dica-item-image swiper-lazy" width="1512" height="2016"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_6">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_6">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4081-2.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4081-2.jpeg 1152w, /wp-content/uploads/2022/02/IMG_4081-2-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4081-2-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1152" height="1536"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_7">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_7">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4112-2.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4112-2.jpeg 1149w, /wp-content/uploads/2022/02/IMG_4112-2-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4112-2-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1149" height="1532"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_8">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_8">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4077-2.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4077-2.jpeg 1152w, /wp-content/uploads/2022/02/IMG_4077-2-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4077-2-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1152" height="1536"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_9">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_9">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4063-2.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4063-2.jpeg 1152w, /wp-content/uploads/2022/02/IMG_4063-2-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4063-2-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1152" height="1536"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
-			</div><div class="et_pb_module dica_divi_carouselitem dica_divi_carouselitem_10">
-				
-				
-				
-				
-				
-				
-				<div class="et_pb_module_inner">
-					 <div class="dica-item empty-content image_top swiper-lazy loading" data-hash="dica_divi_carouselitem_10">
-									<div class="dica-image-container"><span class="image"><img data-src="/wp-content/uploads/2022/02/IMG_4047-2.jpeg" data-srcset="/wp-content/uploads/2022/02/IMG_4047-2.jpeg 1152w, /wp-content/uploads/2022/02/IMG_4047-2-980x1307.jpeg 980w, /wp-content/uploads/2022/02/IMG_4047-2-480x640.jpeg 480w" alt="" class="dica-item-image swiper-lazy" width="1152" height="1536"/><div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div></span></div>
-									
-							</div>
-				</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
 			</div></div>	
 								</div>	
 								
