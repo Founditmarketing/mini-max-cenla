@@ -1,0 +1,21 @@
+.mobile_nav.opened .mobile_menu_bar:before{content:'\4d'}.mobile_menu_bar:before{transition:all .45s ease;transform:rotate(180deg);display:block}.mobile_nav.opened .mobile_menu_bar::before{transition:all .45s ease;transform:rotate(180deg);display:block}.mobile_menu_bar{background-color:rgba(255,255,255,0.4);padding:4px;margin-bottom:3px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}.et_pb_sticky .mobile_menu_bar{background-color:#C70215;padding:5px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,ul.et_mobile_menu li.page_item_has_children .mobile-toggle,.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,.et-db #et-boc .et-l ul.et_mobile_menu li.page_item_has_children .mobile-toggle{width:44px;height:100%;padding:0px!important;max-height:44px;position:absolute;right:0px;top:0px;z-index:999;background-color:transparent}ul.et_mobile_menu>li.menu-item-has-children,ul.et_mobile_menu>li.page_item_has_children,ul.et_mobile_menu>li.menu-item-has-children .sub-menu li.menu-item-has-children,.et-db #et-boc .et-l ul.et_mobile_menu>li.menu-item-has-children,.et-db #et-boc .et-l ul.et_mobile_menu>li.page_item_has_children,.et-db #et-boc .et-l ul.et_mobile_menu>li.menu-item-has-children .sub-menu li.menu-item-has-children{position:relative}.et_mobile_menu .menu-item-has-children>a,.et-db #et-boc .et-l .et_mobile_menu .menu-item-has-children>a{background-color:transparent}ul.et_mobile_menu .menu-item-has-children .sub-menu,#main-header ul.et_mobile_menu .menu-item-has-children .sub-menu,.et-db #et-boc .et-l ul.et_mobile_menu .menu-item-has-children .sub-menu,.et-db #main-header ul.et_mobile_menu .menu-item-has-children .sub-menu{display:none!important;visibility:hidden!important}ul.et_mobile_menu .menu-item-has-children .sub-menu.visible,#main-header ul.et_mobile_menu .menu-item-has-children .sub-menu.visible,.et-db #et-boc .et-l ul.et_mobile_menu .menu-item-has-children .sub-menu.visible,.et-db #main-header ul.et_mobile_menu .menu-item-has-children .sub-menu.visible{display:block!important;visibility:visible!important}ul.et_mobile_menu li.menu-item-has-children .mobile-toggle,.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle{text-align:center}ul.et_mobile_menu li.menu-item-has-children .mobile-toggle::after,.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle::after{top:10px;position:relative;font-family:"ETModules"}ul.et_mobile_menu li.menu-item-has-children .mobile-toggle::after,.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children .mobile-toggle::after{content:"\4c"}ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after,.et-db #et-boc .et-l ul.et_mobile_menu li.menu-item-has-children.dt-open>.mobile-toggle::after{content:'\4d'}@media only screen and (max-width:980px){.two-columns .et_pb_column{width:50%!important}.three-columns .et_pb_column{width:33.33%!important}.four-columns .et_pb_column{width:25%!important}}
+/*
+     FILE ARCHIVED ON 05:37:15 Jan 01, 2024 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 16:01:44 Jun 26, 2026.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.386
+  exclusion.robots: 0.055
+  exclusion.robots.policy: 0.047
+  esindex: 0.006
+  cdx.remote: 1428.124
+  LoadShardBlock: 98.247 (3)
+  PetaboxLoader3.datanode: 134.527 (4)
+  PetaboxLoader3.resolve: 83.187 (2)
+  load_resource: 133.836
+*/
