@@ -53,6 +53,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // About slideshow
+  var slideshow = document.querySelector('.about-slideshow');
+  if (slideshow) {
+    var slides = slideshow.querySelectorAll('.slide');
+    var dotsContainer = slideshow.querySelector('.slideshow-dots');
+    var current = 0;
+    slides.forEach(function(_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.addEventListener('click', function() { goTo(i); });
+      dotsContainer.appendChild(dot);
+    });
+    var dots = dotsContainer.querySelectorAll('.dot');
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    setInterval(function() { goTo((current + 1) % slides.length); }, 4000);
+  }
+
   // Contact form handling
   var forms = document.querySelectorAll('.contact-form');
   forms.forEach(function(form) {
