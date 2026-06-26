@@ -53,28 +53,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // About slideshow
+  // About slideshow — card switch animation
   var slideshow = document.querySelector('.about-slideshow');
   if (slideshow) {
     var slides = slideshow.querySelectorAll('.slide');
     var dotsContainer = slideshow.querySelector('.slideshow-dots');
     var current = 0;
+    var animating = false;
     slides.forEach(function(_, i) {
       var dot = document.createElement('button');
       dot.className = 'dot' + (i === 0 ? ' active' : '');
       dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-      dot.addEventListener('click', function() { goTo(i); });
+      dot.addEventListener('click', function() { if (!animating) goTo(i); });
       dotsContainer.appendChild(dot);
     });
     var dots = dotsContainer.querySelectorAll('.dot');
     function goTo(n) {
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
+      if (n === current) return;
+      animating = true;
+      var prev = current;
+      slides[prev].classList.remove('active');
+      slides[prev].classList.add('exit-left');
+      dots[prev].classList.remove('active');
       current = n;
       slides[current].classList.add('active');
       dots[current].classList.add('active');
+      setTimeout(function() {
+        slides[prev].classList.remove('exit-left');
+        animating = false;
+      }, 550);
     }
-    setInterval(function() { goTo((current + 1) % slides.length); }, 4000);
+    setInterval(function() { if (!animating) goTo((current + 1) % slides.length); }, 4000);
   }
 
   // Contact form handling
